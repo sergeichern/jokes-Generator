@@ -1,3 +1,4 @@
+/* Base styles */
 body {
   margin: 0;
   padding: 0;
@@ -9,26 +10,30 @@ body {
   align-items: center;
 }
 
+/* Main container */
 .app {
   background-color: white;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   text-align: center;
-  max-width: 600px;
-  width: 90%;
+  width: 600px;              /* Fixed width */
+  min-height: 400px;         /* Consistent height */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
+
+/* Title */
 h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #333;
 }
 
+/* Joke text */
 p {
   font-size: 1.25rem;
   color: #555;
@@ -36,8 +41,11 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
+/* Button styling */
 button {
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
@@ -48,8 +56,51 @@ button {
   cursor: pointer;
   transition: background-color 0.3s ease;
   align-self: center;
+  margin-top: 1rem;
 }
 
 button:hover {
   background-color: #357ab8;
+}
+/* Horizontal layout for label + checkboxes */
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 1rem 0;
+  gap: 1rem;
+}
+
+/* Label on the left */
+.label-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+}
+
+/* Checkboxes on the right */
+.checkbox-group {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+/* Individual checkbox label */
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+  color: #444;
+  white-space: nowrap;
+}
+
+/* Smaller checkbox input */
+.checkbox-group input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  accent-color: #4a90e2;
 }
